@@ -3,9 +3,5 @@
     background-color: cornflowerblue;
 }
 .content img {
-    height: 100px;
-}
-
-.item {
-    color: green;
+    max-height: 100px;
 }

@@ -5,3 +5,7 @@
 .headerImg {
     height: 50px;
 }
+
+.mainPhoto {
+    max-width: 200px;
+}

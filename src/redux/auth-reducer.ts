@@ -21,7 +21,6 @@ const authReducer = (state = initialState, action: any): InitialStateType => {
             return {
                 ...state,
                 ...action.payload,
-                userId: 'dfd',
             }
         case GET_CAPTCHA_URL_SUCCESS:
             return {
@@ -69,7 +68,7 @@ export const getAuthUserData = () => async (dispatch: any) => {
     }
 }
 
-export const login = (email: string, password: string, rememberMe: boolean, captcha: string) => {
+export const login = (email: string, password: string, rememberMe: boolean, captcha: undefined | null) => {
     return async (dispatch: any) => {
         let response = await authAPI.login(email, password, rememberMe, captcha)
         if (response.data.resultCode === 0) {
